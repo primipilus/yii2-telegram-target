@@ -21,11 +21,11 @@ or add
 'log' => [
     'targets' => [
         [
-            'class' => 'fs\log\TelegramTarget',
-            'levels' => ['error'],
-            'token' => '123456:abc', 
-            'chatId' => '123456', 
-            'prefix' => 'site.ru', 
+            'class'         => 'fs\log\TelegramTarget',
+            'levels'        => ['error'],
+            'token'         => '123456:abc', 
+            'chatId'        => '123456', 
+            'prefixMessage' => 'prefix', 
         ],
     ],
 ],
