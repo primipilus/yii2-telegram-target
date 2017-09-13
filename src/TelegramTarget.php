@@ -14,7 +14,7 @@ use yii\log\Target;
 class TelegramTarget extends Target
 {
 
-    const MSG_LIMIT = 4000;
+    const MESSAGE_LIMIT = 4000;
 
     const TIMEOUT = 0.2;
 
@@ -81,12 +81,12 @@ class TelegramTarget extends Target
      */
     protected function splitMessage(string $message) : array
     {
-        if (strlen($message) > self::MSG_LIMIT) {
+        if (strlen($message) > self::MESSAGE_LIMIT) {
             $i = 0;
             $date = date("Y-m-d H:m:s");
             $messages = array_map(function ($message) use (&$i, $date) {
                 return sprintf("%s \n №%d %s \n %s", $this->prefixMessage, ++$i, $date, $message);
-            }, str_split($message, self::MSG_LIMIT));
+            }, str_split($message, self::MESSAGE_LIMIT));
         } else {
             $messages[] = sprintf("%s \n %s", $this->prefixMessage, $message);
         }
