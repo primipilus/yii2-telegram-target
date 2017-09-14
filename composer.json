@@ -1,17 +1,22 @@
 {
-    "name": "primipilus/yii2-telegram-log",
-    "description": "Yii 2.0 telegram log",
-    "keywords": ["yii2", "telegram", "bot", "log"],
-    "type": "yii2-extension",
-    "license": "BSD-3-Clause",
-    "require": {
-        "php": ">=7.1.0",
-        "yiisoft/yii2": "~2.0.0",
-        "guzzlehttp/guzzle": "^6.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "primipilus\\log\\": "src/"
-        }
+  "name": "primipilus/yii2-telegram-target",
+  "description": "Yii 2.0 telegram log",
+  "keywords": [
+    "yii2",
+    "telegram",
+    "bot",
+    "log"
+  ],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=7.1.0",
+    "yiisoft/yii2": "~2.0.0",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "primipilus\\log\\": "src/"
     }
+  }
 }

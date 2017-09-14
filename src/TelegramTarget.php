@@ -1,5 +1,5 @@
 <?php
-namespace primipilus\log\src;
+namespace primipilus\log;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -9,7 +9,7 @@ use yii\log\Target;
 /**
  * Class TelegramTarget
  *
- * @package fotoskladru\log
+ * @package primipilus\log
  */
 class TelegramTarget extends Target
 {

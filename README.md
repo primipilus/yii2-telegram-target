@@ -6,13 +6,13 @@
 run
 
 ```
-php composer require --prefer-dist primipilus/yii2-telegram-log
+composer require primipilus/yii2-telegram-target:^1.0
 ```
 
 or add 
 
 ```
-"primipilus/yii2-telegram-log": "*"
+"primipilus/yii2-telegram-target": "^1.0"
 ```
 
 ## How To Use ##
@@ -21,11 +21,11 @@ or add
 'log' => [
     'targets' => [
         [
-            'class'         => 'fs\log\TelegramTarget',
-            'levels'        => ['error'],
-            'token'         => '123456:abc', 
-            'chatId'        => '123456', 
-            'prefixMessage' => 'prefix', 
+            'class'  => \primipilus\log\TelegramTarget::class,
+            'levels' => ['error'],
+            'token'  => '123456:abc', 
+            'chatId' => '123456', 
+            'prefixMessage' => 'prefixMessage', 
         ],
     ],
 ],
