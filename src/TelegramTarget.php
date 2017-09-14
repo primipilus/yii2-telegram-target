@@ -1,5 +1,5 @@
 <?php
-namespace fs\log\src;
+namespace primipilus\log\src;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;

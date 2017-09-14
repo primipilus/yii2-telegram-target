@@ -6,13 +6,13 @@
 run
 
 ```
-php composer require --prefer-dist fotoskladru/yii2-telegram-log
+php composer require --prefer-dist primipilus/yii2-telegram-log
 ```
 
 or add 
 
 ```
-"fotoskladru/yii2-telegram-log": "*"
+"primipilus/yii2-telegram-log": "*"
 ```
 
 ## How To Use ##

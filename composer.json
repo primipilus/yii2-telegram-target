@@ -1,5 +1,5 @@
 {
-    "name": "fotoskladru/yii2-telegram-log",
+    "name": "primipilus/yii2-telegram-log",
     "description": "Yii 2.0 telegram log",
     "keywords": ["yii2", "telegram", "bot", "log"],
     "type": "yii2-extension",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fs\\log\\": "src/"
+            "primipilus\\log\\": "src/"
         }
     }
 }
