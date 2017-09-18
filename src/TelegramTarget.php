@@ -3,7 +3,7 @@
 namespace primipilus\log;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
 use yii\base\InvalidConfigException;
 use yii\log\Target;
 
@@ -71,7 +71,7 @@ class TelegramTarget extends Target
         $uri = 'https://api.telegram.org/bot' . $this->token . '/sendMessage';
         try {
             $this->client->post($uri, $options);
-        } catch (ClientException $e) {
+        } catch (RequestException $e) {
         }
     }
 
