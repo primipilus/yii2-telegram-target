@@ -1,4 +1,5 @@
 <?php
+
 namespace primipilus\log;
 
 use GuzzleHttp\Client;
@@ -62,10 +63,10 @@ class TelegramTarget extends Target
      */
     protected function sendMessage(array $params) : void
     {
-        $query = array_filter($params);
         $options = [
-            'json'    => $query,
-            'timeout' => self::TIMEOUT,
+            'json'        => $params,
+            'timeout'     => self::TIMEOUT,
+            'http_errors' => false,
         ];
         $uri = 'https://api.telegram.org/bot' . $this->token . '/sendMessage';
         try {
