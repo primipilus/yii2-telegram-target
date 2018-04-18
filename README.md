@@ -26,6 +26,7 @@ or add
             'token'  => '123456:abc', 
             'chatId' => '123456', 
             'prefixMessage' => 'prefixMessage', 
+            'proxy' => 'protocol://login:password@host:port', 
         ],
     ],
 ],
