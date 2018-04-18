@@ -17,7 +17,7 @@ class TelegramTarget extends Target
 
     const MESSAGE_LIMIT = 4000;
 
-    const TIMEOUT = 0.2;
+    const TIMEOUT = 0.4;
 
     /** @var  Client */
     protected $client;
@@ -31,6 +31,9 @@ class TelegramTarget extends Target
     /** @var  string */
     public $prefixMessage = '';
 
+    /** @var  string */
+    public $proxy;
+
     /**
      * Check required properties
      */
@@ -42,7 +45,8 @@ class TelegramTarget extends Target
                 throw new InvalidConfigException(self::class . "::\$$property property must be set");
             }
         }
-        $this->client = new Client();
+        $config = (null !== $this->proxy) ? ['proxy' => $this->proxy] : [];
+        $this->client = new Client($config);
     }
 
     public function export()
