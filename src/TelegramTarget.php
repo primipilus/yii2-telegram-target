@@ -14,10 +14,7 @@ use yii\log\Target;
  */
 class TelegramTarget extends Target
 {
-
-    const MESSAGE_LIMIT = 4000;
-
-    const TIMEOUT = 0.4;
+    private const MESSAGE_LIMIT = 4000;
 
     /** @var  Client */
     protected $client;
@@ -34,8 +31,12 @@ class TelegramTarget extends Target
     /** @var  string */
     public $proxy;
 
+    /** @var float */
+    public $timeout = 0.4;
+
     /**
      * Check required properties
+     * @throws InvalidConfigException
      */
     public function init()
     {
@@ -69,7 +70,7 @@ class TelegramTarget extends Target
     {
         $options = [
             'json'        => $params,
-            'timeout'     => self::TIMEOUT,
+            'timeout'     => $this->timeout,
             'http_errors' => false,
         ];
         $uri = 'https://api.telegram.org/bot' . $this->token . '/sendMessage';

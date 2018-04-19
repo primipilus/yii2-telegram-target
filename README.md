@@ -21,12 +21,13 @@ or add
 'log' => [
     'targets' => [
         [
-            'class'  => \primipilus\log\TelegramTarget::class,
-            'levels' => ['error'],
-            'token'  => '123456:abc', 
-            'chatId' => '123456', 
+            'class'         => \primipilus\log\TelegramTarget::class,
+            'levels'        => ['error'],
+            'timeout'       => 0.4,
+            'token'         => '123456:abc', 
+            'chatId'        => '123456', 
             'prefixMessage' => 'prefixMessage', 
-            'proxy' => 'protocol://login:password@host:port', 
+            'proxy'         => 'protocol://login:password@host:port', 
         ],
     ],
 ],
